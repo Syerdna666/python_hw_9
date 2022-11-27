@@ -36,7 +36,7 @@ def quiz(message, counts, right_number):
         bot.register_next_step_handler(message, quiz, counts, right_number)
 
 @bot.message_handler(content_types=['text'])
-def calc(message):
+def start(message):
     if 'Calculate' in message.text:
         bot.reply_to(message, 'Enter expressions for calculation:')
         bot.register_next_step_handler(message, calculate)
